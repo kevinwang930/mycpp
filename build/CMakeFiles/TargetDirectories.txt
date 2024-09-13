@@ -1,3 +1,0 @@
-/opt/code/mycpp/build/CMakeFiles/Example.dir
-/opt/code/mycpp/build/CMakeFiles/edit_cache.dir
-/opt/code/mycpp/build/CMakeFiles/rebuild_cache.dir
