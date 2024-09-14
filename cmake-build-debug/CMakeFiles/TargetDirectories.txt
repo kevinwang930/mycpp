@@ -1,3 +1,7 @@
 /opt/code/mycpp/cmake-build-debug/CMakeFiles/Example.dir
 /opt/code/mycpp/cmake-build-debug/CMakeFiles/edit_cache.dir
 /opt/code/mycpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/opt/code/mycpp/cmake-build-debug/MathFunctions/CMakeFiles/MathFunctions.dir
+/opt/code/mycpp/cmake-build-debug/MathFunctions/CMakeFiles/SqrtLibrary.dir
+/opt/code/mycpp/cmake-build-debug/MathFunctions/CMakeFiles/edit_cache.dir
+/opt/code/mycpp/cmake-build-debug/MathFunctions/CMakeFiles/rebuild_cache.dir

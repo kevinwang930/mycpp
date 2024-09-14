@@ -3,13 +3,23 @@
 # TODO 1: Add a library called MathFunctions with sources MathFunctions.cxx
 # and mysqrt.cxx
 # Hint: You will need the add_library command
-add_library(MathFunctions MathFunctions.cxx mysqrt.cxx)
+add_library(MathFunctions MathFunctions.cxx)
 # TODO 7: Create a variable USE_MYMATH using option and set default to ON
-
+option(USE_MYMATH "use customized math implementation" ON)
 # TODO 8: If USE_MYMATH is ON, use target_compile_definitions to pass
 # USE_MYMATH as a precompiled definition to our source files
-
-# TODO 12: When USE_MYMATH is ON, add a library for SqrtLibrary with
+if (USE_MYMATH)
+    target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
+    # TODO 12: When USE_MYMATH is ON, add a library for SqrtLibrary with
+    add_library(SqrtLibrary STATIC mysqrt.cxx)
+    # TODO 13: When USE_MYMATH is ON, link SqrtLibrary to the MathFunctions Library
+    target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
+endif ()
 # source mysqrt.cxx
+target_link_libraries(SqrtLibrary PUBLIC Mycpp_compiler_flags)
+target_link_libraries(MathFunctions PUBLIC Mycpp_compiler_flags)
+target_include_directories(MathFunctions INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
-# TODO 13: When USE_MYMATH is ON, link SqrtLibrary to the MathFunctions Library
+
+
+

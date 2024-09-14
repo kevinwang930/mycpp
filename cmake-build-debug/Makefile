@@ -129,6 +129,32 @@ Example/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Example.dir/build.make CMakeFiles/Example.dir/build
 .PHONY : Example/fast
 
+#=============================================================================
+# Target rules for targets named MathFunctions
+
+# Build rule for target.
+MathFunctions: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MathFunctions
+.PHONY : MathFunctions
+
+# fast build rule for target.
+MathFunctions/fast:
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/build
+.PHONY : MathFunctions/fast
+
+#=============================================================================
+# Target rules for targets named SqrtLibrary
+
+# Build rule for target.
+SqrtLibrary: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SqrtLibrary
+.PHONY : SqrtLibrary
+
+# fast build rule for target.
+SqrtLibrary/fast:
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/build
+.PHONY : SqrtLibrary/fast
+
 tutorial.o: tutorial.cxx.o
 .PHONY : tutorial.o
 
@@ -162,6 +188,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Example"
+	@echo "... MathFunctions"
+	@echo "... SqrtLibrary"
 	@echo "... tutorial.o"
 	@echo "... tutorial.i"
 	@echo "... tutorial.s"

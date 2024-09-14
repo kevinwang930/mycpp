@@ -228,6 +228,9 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for the target
+MathFunctions_LIB_DEPENDS:STATIC=general;SqrtLibrary;
+
 //Value Computed by CMake
 My_BINARY_DIR:STATIC=/opt/code/mycpp/cmake-build-debug
 
@@ -254,6 +257,12 @@ Tutorial_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Tutorial_SOURCE_DIR:STATIC=/opt/code/mycpp
+
+//use customized math implementation
+USE_MATH:BOOL=OFF
+
+//use customized math implementation
+USE_MYMATH:BOOL=ON
 
 
 ########################
@@ -350,7 +359,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

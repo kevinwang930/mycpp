@@ -29,6 +29,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/hwllcp-marlsen-47932/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.29/Modules/Platform/Darwin.cmake"
   "/Users/hwllcp-marlsen-47932/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.29/Modules/Platform/UnixPaths.cmake"
   "/opt/code/mycpp/CMakeLists.txt"
+  "/opt/code/mycpp/MathFunctions/CMakeLists.txt"
   "/opt/code/mycpp/TutorialConfig.h.in"
   "CMakeFiles/3.29.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.6/CMakeCXXCompiler.cmake"
@@ -45,9 +46,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "TutorialConfig.h"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "MathFunctions/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Example.dir/DependInfo.cmake"
+  "MathFunctions/CMakeFiles/MathFunctions.dir/DependInfo.cmake"
+  "MathFunctions/CMakeFiles/SqrtLibrary.dir/DependInfo.cmake"
   )

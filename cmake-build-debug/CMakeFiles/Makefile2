@@ -64,21 +64,41 @@ CMAKE_BINARY_DIR = /opt/code/mycpp/cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/Example.dir/all
+all: MathFunctions/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: MathFunctions/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Example.dir/clean
+clean: MathFunctions/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory MathFunctions
+
+# Recursive "all" directory target.
+MathFunctions/all: MathFunctions/CMakeFiles/MathFunctions.dir/all
+MathFunctions/all: MathFunctions/CMakeFiles/SqrtLibrary.dir/all
+.PHONY : MathFunctions/all
+
+# Recursive "preinstall" directory target.
+MathFunctions/preinstall:
+.PHONY : MathFunctions/preinstall
+
+# Recursive "clean" directory target.
+MathFunctions/clean: MathFunctions/CMakeFiles/MathFunctions.dir/clean
+MathFunctions/clean: MathFunctions/CMakeFiles/SqrtLibrary.dir/clean
+.PHONY : MathFunctions/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Example.dir
 
 # All Build rule for target.
-CMakeFiles/Example.dir/all:
+CMakeFiles/Example.dir/all: MathFunctions/CMakeFiles/MathFunctions.dir/all
+CMakeFiles/Example.dir/all: MathFunctions/CMakeFiles/SqrtLibrary.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Example.dir/build.make CMakeFiles/Example.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Example.dir/build.make CMakeFiles/Example.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/opt/code/mycpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Example"
@@ -86,7 +106,7 @@ CMakeFiles/Example.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /opt/code/mycpp/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/code/mycpp/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /opt/code/mycpp/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Example.dir/rule
@@ -99,6 +119,58 @@ Example: CMakeFiles/Example.dir/rule
 CMakeFiles/Example.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Example.dir/build.make CMakeFiles/Example.dir/clean
 .PHONY : CMakeFiles/Example.dir/clean
+
+#=============================================================================
+# Target rules for target MathFunctions/CMakeFiles/MathFunctions.dir
+
+# All Build rule for target.
+MathFunctions/CMakeFiles/MathFunctions.dir/all: MathFunctions/CMakeFiles/SqrtLibrary.dir/all
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/depend
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/opt/code/mycpp/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target MathFunctions"
+.PHONY : MathFunctions/CMakeFiles/MathFunctions.dir/all
+
+# Build rule for subdir invocation for target.
+MathFunctions/CMakeFiles/MathFunctions.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/code/mycpp/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MathFunctions.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/code/mycpp/cmake-build-debug/CMakeFiles 0
+.PHONY : MathFunctions/CMakeFiles/MathFunctions.dir/rule
+
+# Convenience name for target.
+MathFunctions: MathFunctions/CMakeFiles/MathFunctions.dir/rule
+.PHONY : MathFunctions
+
+# clean rule for target.
+MathFunctions/CMakeFiles/MathFunctions.dir/clean:
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/clean
+.PHONY : MathFunctions/CMakeFiles/MathFunctions.dir/clean
+
+#=============================================================================
+# Target rules for target MathFunctions/CMakeFiles/SqrtLibrary.dir
+
+# All Build rule for target.
+MathFunctions/CMakeFiles/SqrtLibrary.dir/all:
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/depend
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/opt/code/mycpp/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target SqrtLibrary"
+.PHONY : MathFunctions/CMakeFiles/SqrtLibrary.dir/all
+
+# Build rule for subdir invocation for target.
+MathFunctions/CMakeFiles/SqrtLibrary.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/code/mycpp/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/SqrtLibrary.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /opt/code/mycpp/cmake-build-debug/CMakeFiles 0
+.PHONY : MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
+
+# Convenience name for target.
+SqrtLibrary: MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
+.PHONY : SqrtLibrary
+
+# clean rule for target.
+MathFunctions/CMakeFiles/SqrtLibrary.dir/clean:
+	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/clean
+.PHONY : MathFunctions/CMakeFiles/SqrtLibrary.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

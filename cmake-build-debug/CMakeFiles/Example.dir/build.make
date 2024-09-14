@@ -92,6 +92,8 @@ Example_EXTERNAL_OBJECTS =
 
 Example: CMakeFiles/Example.dir/tutorial.cxx.o
 Example: CMakeFiles/Example.dir/build.make
+Example: MathFunctions/libMathFunctions.a
+Example: MathFunctions/libSqrtLibrary.a
 Example: CMakeFiles/Example.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/opt/code/mycpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Example"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Example.dir/link.txt --verbose=$(VERBOSE)
